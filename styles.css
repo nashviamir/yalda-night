@@ -33,7 +33,6 @@
     background-size: cover;
     height: 100dvh;
     backdrop-filter: blur(5px);
-    
     width: 100vw;
     overflow: hidden;
   }
@@ -44,7 +43,7 @@
     transform: translate(-75%);
     left: 50%;
     right: 0;
-    top: 13%;
+    top: 10dvh;
     bottom: 0;
     -webkit-perspective: 1200px;
     perspective: 1200px;
@@ -132,7 +131,7 @@
     
     width: min(320px, 75%);
     left: 50%;
-    top: 13%;
+    top: 10dvh;
     transform: translate(-50%, 400px);
     position: absolute;
   }
