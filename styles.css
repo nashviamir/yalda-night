@@ -40,7 +40,7 @@
     width: min(640px, 150%);
     height: 400px;
     position: absolute;
-    transform: translate(-75%);
+    transform: translate(-75%, 0);
     left: 50%;
     right: 0;
     top: 10dvh;
