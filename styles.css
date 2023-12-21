@@ -1,0 +1,186 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  @font-face {
+    font-family: 'plasma';
+    src: url('./fonts/PlasmaCircleDots-Bold.woff2') format('woff2'),
+        url('./fonts/PlasmaCircleDots-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'yekan';
+    src: url('./fonts/BYekan.woff2') format('woff2'),
+        url('./fonts/BYekan.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+  .plasma {
+    font-family: 'plasma';
+  }
+
+  body {
+    background-image: url('./images/bg.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 100dvh;
+    backdrop-filter: blur(5px);
+    width: 100vw;
+    overflow: hidden;
+  }
+  .card {
+    width: min(640px, 150%);
+    height: 400px;
+    position: absolute;
+    transform: translate(-75%,-50%);
+    left: 50%;
+    right: 0;
+    top: 35%;
+    bottom: 0;
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+    transition: 1s;
+  }
+  .card.open {
+    transform: translate(-75%,-50%) rotate(-5deg);
+  }
+  .card.open .outside {
+    transform: rotateY(-130deg);
+  }
+  .outside,
+  .inside {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    left: 50.1%;
+  }
+  .inside {
+    background: linear-gradient(to right, #e7e7e7, #ffffff 30%);
+    line-height: 3;
+    padding: 0 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    left: 50%;
+  }
+  .outside {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    z-index: 1;
+    transform-origin: left;
+    transition: 2s;
+    cursor: pointer;
+  }
+  .front,
+  .back {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+  }
+  .front {
+    background-color: #ffffff;
+  }
+  .back {
+    transform: rotateY(180deg);
+    background: linear-gradient(to left, #e7e7e7, #ffffff 30%);
+  }
+  .watermelon {
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    flex-direction: row;
+  }
+  .watermelon img {
+    margin: 0 auto;
+  }
+  .outside p {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-top: 30px;
+    text-align: center;
+    font-family: 'plasma';
+    direction: rtl;
+    color: #000046;
+  }
+  .inside h1 {
+    font-size: 30px;
+    color: #be0000
+  }
+
+  .inside p {
+    font-family: "yekan";
+    letter-spacing: normal;
+    font-weight: 600;
+  }
+
+  .content {
+    
+    width: min(320px, 75%);
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, 200px);
+    position: absolute;
+  }
+  .box {
+    border-radius: 10px;
+    background-color: #fafafa;
+    margin: 2em 0;
+    padding: 1em;
+    direction: rtl;
+    text-align: center;
+  }
+  .box p{
+    font-family: 'yekan';
+    
+    font-weight: 600;
+    margin-bottom: 1em;
+  }
+
+  audio {
+    display: none;
+  }
+
+  .btn {
+    border-radius: 7px;
+    
+    padding: 0.5em 1.5em;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'yekan';
+    text-align: center;
+    font-weight: 600;
+    font-size: 20;
+    cursor: pointer;
+  }
+
+  .btn-red {
+    background-color: #ff3333;
+  }
+
+  .btn-muted {
+    background-color: #dbdbdb;
+    color: rgb(75, 75, 75);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    align-items: center;
+    
+  }
+  button svg {
+    margin-left: 0.5em;
+    width: 20px;
+    height: 20px;
+  }
