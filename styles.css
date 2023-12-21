@@ -39,7 +39,7 @@
     background-image: url('./images/bg.jpg');
     background-position: center;
     background-size: cover;
-    height: 100dvh;
+    height: 100vh;
     backdrop-filter: blur(5px);
     width: 100vw;
     overflow: hidden;
